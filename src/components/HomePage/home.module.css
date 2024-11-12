@@ -1,0 +1,95 @@
+.blocks {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.theBest,
+.Sweets {
+  display: flex;
+  flex-direction: column;
+}
+
+.theBest p,
+.Sweets p {
+  text-align: right;
+  cursor: pointer;
+  font-weight: 900;
+  height: clamp(25px, 4vw, 30px);
+  transition: 0.8s;
+}
+
+.Sweets p:hover,
+.theBest p:hover {
+  transform: scale(1.1);
+}
+
+.tes {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.tes h1 {
+  font-size: clamp(1.5rem, 4vw, 2rem);
+}
+
+@media (max-width: 1200px) {
+  .blocks {
+    gap: 20px;
+  }
+
+  .tes h1 {
+    font-size: clamp(1.4rem, 3.5vw, 1.8rem);
+  }
+
+  .theBest p,
+  .Sweets p {
+    font-size: clamp(1rem, 3vw, 1.2rem);
+  }
+}
+
+@media (max-width: 992px) {
+  .blocks {
+    gap: 15px;
+  }
+
+  .tes h1 {
+    font-size: clamp(1.3rem, 3vw, 1.6rem);
+  }
+
+  .theBest p,
+  .Sweets p {
+    font-size: clamp(1rem, 2.5vw, 1.1rem);
+  }
+}
+
+@media (max-width: 768px) {
+  .blocks {
+    gap: 10px;
+  }
+
+  .tes h1 {
+    font-size: clamp(1.2rem, 2.8vw, 1.5rem);
+  }
+
+  .theBest p,
+  .Sweets p {
+    font-size: clamp(0.9rem, 2.5vw, 1rem);
+  }
+}
+
+@media (max-width: 480px) {
+  .blocks {
+    gap: 10px;
+  }
+
+  .tes h1 {
+    font-size: clamp(1rem, 3vw, 1.2rem);
+  }
+
+  .theBest p,
+  .Sweets p {
+    font-size: clamp(0.8rem, 2.5vw, 0.9rem);
+  }
+}

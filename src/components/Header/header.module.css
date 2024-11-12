@@ -1,0 +1,169 @@
+/* Основной стиль */
+header {
+  padding: clamp(5px, 2vw, 10px) 0;
+  border-bottom: 1px solid rgba(132, 130, 130, 0.525);
+  margin-bottom: clamp(30px, 5vw, 60px);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hea {
+  display: flex;
+  align-items: center;
+  gap: clamp(5px, 2vw, 10px);
+}
+
+.hea h1 {
+  font-size: clamp(1.5rem, 4vw, 2rem); 
+}
+
+.logo {
+  width: clamp(60px, 10vw, 100px);
+}
+
+.hea img {
+  cursor: pointer;
+}
+.burger {
+  display: none;
+}
+
+.inp {
+  display: flex;
+  align-items: center;
+  gap: clamp(5px, 2vw, 10px);
+}
+
+.inp input {
+  border: 2px solid transparent;
+  width: clamp(13em, 20vw, 15em);
+  height: clamp(2em, 5vw, 2.5em);
+  padding-left: clamp(0.5em, 1vw, 0.8em);
+  outline: none;
+  background-color: #F3F3F3;
+  border-radius: clamp(5px, 1vw, 10px);
+  transition: all 0.5s;
+}
+
+.inp input:hover,
+.inp input:focus {
+  border: 2px solid #4A9DEC;
+  box-shadow: 0px 0px 0px 7px rgba(74, 157, 236, 0.2);
+  background-color: white;
+}
+.modal {
+  position: absolute; /* или fixed в зависимости от макета */
+  z-index: 1000; /* или больше, если нужно */
+  backdrop-filter: blur(3px);
+  border-radius: 10px;
+  padding: 10px;
+  background-color: #4a9eeca3;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  color: #725AC1;
+}
+.modal a:hover {
+  color: white;
+}
+
+.inp button {
+  border: none;
+  font-size: clamp(1rem, 2vw, 1.2rem); 
+  background: #ff622e;
+  padding: clamp(8px, 2vw, 10px) clamp(15px, 5vw, 20px);
+  border-radius: clamp(5px, 1vw, 10px);
+  cursor: pointer;
+  color: white;
+  transition: 0.3s;
+}
+
+.inp button:hover {
+  color: white;
+  box-shadow: inset 0 -100px 0 0 #725AC1;
+}
+
+.inp button:active {
+  transform: scale(0.9);
+}
+
+.navs {
+  display: flex;
+  align-items: center;
+  gap: clamp(15px, 3vw, 30px);
+}
+
+.navs a {
+  color: #ff622e;
+  font-size: clamp(0.8rem, 3vw, 1.5rem);
+}
+
+.navs a:nth-child(2) {
+  color: #ff622e;
+}
+
+.der {
+  display: flex;
+  align-items: center;
+  gap: clamp(15px, 3vw, 30px);
+}
+
+/* Адаптация для экрана шириной 1024px */
+@media (max-width: 1024px) {
+  .logo {
+    width: 80px;
+  }
+  .hea h1 {
+    font-size: clamp(1.2rem, 3.5vw, 1.8rem);
+  }
+  .inp input {
+  }
+}
+
+@media (max-width: 768px) {
+  .hea {
+    gap: 5px;
+  }
+
+  .navs a {
+    font-size: clamp(0.7rem, 2.5vw, 1.2rem);
+  }
+  .inp button {
+    display: none;
+  }
+}
+
+@media (max-width: 430px) {
+  .header {
+    align-items: center;
+  }
+  .burger {
+    display: block;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  
+  .navs {
+    display: none;
+  }
+  .inp button {
+    display: none;
+  }
+  .hea img {
+    width: 40px;
+  }
+  .inp input {
+    /* width: clamp(5em, 12vw, 8em); */
+  }
+   .logo {
+display: none;
+  }
+  .inp button {
+    font-size: clamp(0.8rem, 1.5vw, 1rem);
+    padding: clamp(4px, 1vw, 6px) clamp(8px, 2vw, 12px);
+  }
+}
